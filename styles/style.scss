@@ -1,4 +1,5 @@
 @import "_fonts";
+@import "_bits";
 
 * {
   margin: 0;
@@ -9,19 +10,42 @@ html, body {
   height: 100%;
 }
 
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 header {
-  height: 70px;
-  width: 100%;
+//  height: 70px;
   background-image: url(../images/background_light_opacity.jpg);
   text-transform: uppercase;
   font-family: 'Bree Serif', serif;
   .nav_content {
-    width: 940px;
-    margin: 0 auto;
-    height: 100%;
+
+    @include breakpoint(desktop) {
+      width: 940px;
+    }
+
+    @include breakpoint(tablet) {
+      width: 100%;
+      text-align: center
+    }
+
     .logo {
-      float: left;
-      height: inherit;
+      @include breakpoint(desktop) {
+        float: left;
+      }
+
+      @include breakpoint(tablet) {
+        float: none;
+      }
+
       a {
         color: #000;
         font-size: 30px;
@@ -32,11 +56,21 @@ header {
         }
       }
     }
+
     nav {
-      float: right;
-      height: inherit;
+      @include breakpoint(desktop) {
+        float: right;
+      }
+
+      @include breakpoint(tablet) {
+        float: none;
+      }
+
       ul {
-        height: inherit;
+        @include breakpoint(tablet) {
+          display: inline-block;
+        }
+
         li {
           float: left;
           display: block;
@@ -70,23 +104,35 @@ header {
     }
   }
 }
+
 .wrapper {
   font-family: 'Bree Serif', serif;
   width: 100%;
   z-index: 1;
   padding-top: 25px;
-  height: 100%;
+
   .wrapper_main_content {
     background: url(../images/background_mix.jpg);
-    height: 385px;
     z-index: 5;
+//    @include breakpoint(desktop) {
+//      width: 940px;
+//    }
+//
+//    @include breakpoint(tablet) {
+//      width: 100%;
+//    }
     .main_content {
-      width: 940px;
       height: 100%;
-      margin: 0 auto;
       padding-bottom: 50px;
       .main_info {
-        float: left;
+        @include breakpoint(desktop) {
+          float: left;
+        }
+
+        @include breakpoint(tablet) {
+          float: none;
+        }
+
         width: 372px;
         padding-top: 22px;
         position: relative;
@@ -135,15 +181,17 @@ header {
       .video {
         margin-top:  75px;
         width: 462px;
-        float: right;
+        @include breakpoint(desktop) {
+          float: right;
+        }
+
+        @include breakpoint(tablet) {
+          float: none;
+        }
       }
     }
   }
- /* .wrapper:after {
-    content: "";
-    display: table;
-    clear: both;
-  }*/
+
   .basement {
     width: 940px;
     min-height: 100%;
@@ -197,11 +245,6 @@ header {
       }
     }
   }
-  .basement:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
 }
 
 .main_wrapper {
@@ -240,12 +283,4 @@ footer {
     }
   }
 }
-/*
-@media screen and (max-width: 940px) {
-  header {
-    .nav_content {
-      width: 460px;
-    }
-  }
-}
-  */
+
