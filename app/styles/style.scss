@@ -1,3 +1,4 @@
+@import "_reset";
 @import "_fonts";
 @import "_bits";
 
@@ -111,16 +112,19 @@ header {
   z-index: 1;
   padding-top: 25px;
 
-  .wrapper_main_content {
+  .bg_holder {
+    width: 100%;
     background: url(../images/background_mix.jpg);
+  }
+  .wrapper_main_content {
     z-index: 5;
-//    @include breakpoint(desktop) {
-//      width: 940px;
-//    }
-//
-//    @include breakpoint(tablet) {
-//      width: 100%;
-//    }
+    @include breakpoint(desktop) {
+      width: 940px;
+    }
+
+    @include breakpoint(tablet) {
+      width: 100%;
+    }
     .main_content {
       height: 100%;
       padding-bottom: 50px;
@@ -137,18 +141,18 @@ header {
         padding-top: 22px;
         position: relative;
        h1 {
-          margin-bottom: 3px;
-          font-size: 24px;
-          color: #5a9e61;
-         span {
-           background-color: white;
-         }
+        margin-bottom: 3px;
+        font-size: 24px;
+        color: #5a9e61;
+        background-color: white;
+        display: inline-block;
+        font-weight: normal;
       }
         :first-child{
           margin-bottom: 6px;
         }
         :last-child{
-          margin-bottom: 0;
+          margin-bottom: 0px;
         }
         p {
           font-size: 16px;
@@ -279,7 +283,6 @@ footer {
         display: block;
         padding: 8px 5px;
       }
-
     }
   }
 }
