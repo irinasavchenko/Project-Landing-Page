@@ -24,29 +24,33 @@
 <body>
 <div class="main_wrapper">
   <header class="clearfix">
-    <div class="nav_content center">
+    <div class="nav_content center clearfix">
       <div class="logo">
         <a href="#">STRIPES<span>*/</span></a>
       </div>
       <nav>
         <ul class="clearfix">
           <li class="active"><a href="#">home <span></span></a></li>
-          <li>/</li>
+          <li class="add_li">/</li>
           <li><a href="#">about<span></span></a></li>
-          <li>/</li>
-          <li><a href="#">references<span></span></a></li>
-          <li>/</li>
+          <li class="add_li">/</li>
+          <li class="active_for_mobile"><a href="#">references<span></span></a></li>
+          <li class="add_li">/</li>
           <li><a href="#">blog<span></span></a></li>
-          <li>/</li>
+          <li class="add_li">/</li>
           <li><a href="#">contact<span></span></a></li>
         </ul>
       </nav>
     </div>
   </header>
+
   <div class="wrapper">
     <div class="bg_holder">
       <div class="wrapper_main_content clearfix center">
         <div class="main_content">
+          <div class="video center">
+            <video width="460" height="240" controls="controls" poster="./images/Video_img.jpg" src="#"></video>
+          </div>
           <div class="main_info center">
             <h1>Can User Experience Be Beautiful?</h1>
             <h1>An Analysis Of Navigation In</h1>
@@ -57,10 +61,6 @@
             <div class="more">
               <a href="#">more »</a>
             </div>
-          </div>
-          <div class="video center">
-            <video width="462" height="240" controls  poster="./images/Video_img.jpg" src="https://youtu.be/uY3XGOMszss">
-            </video>
           </div>
         </div>
       </div>
@@ -90,16 +90,18 @@
         </li>
       </ul>
     </div>
+
+
   </div>
-  <footer>
+  <footer class="center">
     <div class="copyright">
       <p>© copyright</p>
     </div>
     <div class="social_networks">
-      <ul>
-        <li><a href="#"><img src="./images/img_RSS.jpg"></a></li>
-        <li><a href="#"><img src="./images/img_facebook.jpg"></a></li>
-        <li><a href="#"><img src="./images/img_twitter.jpg"></a></li>
+      <ul class="clearfix">
+        <li><a href="#"><img src="./images/img_RSS.jpg" height="25" width="24" alt=""></a></li>
+        <li><a href="#"><img src="./images/img_facebook.jpg" height="25" width="24" alt=""></a></li>
+        <li><a href="#"><img src="./images/img_twitter.jpg" height="25" width="24" alt=""></a></li>
       </ul>
     </div>
   </footer>
