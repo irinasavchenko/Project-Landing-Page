@@ -30,8 +30,13 @@ h1 {
   min-height: 100%;
   background-image: url(../images/Background_light.jpg);
   position: relative;
-header {
-  background-image: url(../images/background_light_opacity.jpg);
+
+  header {
+    background-image: url(../images/background_light_opacity.jpg);
+    @include breakpoint(mobile) {
+      background-image: none;
+    }
+
   .nav_content {
 
     text-transform: uppercase;
@@ -48,9 +53,24 @@ header {
     }
 
     @include breakpoint(mobile) {
-      width: 280px;
+      width: 100%;
       text-align: left;
-      padding: 8px 0;
+      padding: 0;
+    }
+
+    .logo_wrapper {
+      @include breakpoint(mobile) {
+        background-image: url(../images/background_light_opacity.jpg);
+        width: 100%;
+        padding: 8px 0;
+      }
+    }
+
+    .nav_wrapper {
+      @include breakpoint(mobile) {
+        width: 100%;
+        padding-bottom: 8px;
+      }
     }
 
     .logo {
@@ -65,7 +85,8 @@ header {
 
       @include breakpoint(mobile) {
         float: none;
-        margin-bottom: 10px;
+        width: 280px;
+        margin: 0 auto 10px;
       }
       a {
         color: #000;
@@ -87,6 +108,8 @@ header {
 
       @include breakpoint(mobile) {
         width: 280px;
+        float: none;
+        margin: 0 auto;
       }
 
       @include breakpoint(desktop) {
@@ -94,10 +117,6 @@ header {
       }
 
       @include breakpoint(tablet) {
-        float: none;
-      }
-
-      @include breakpoint(mobile) {
         float: none;
       }
 
@@ -192,7 +211,6 @@ header {
     width: 100%;
     z-index: 1;
     padding-top: 25px;
-    background: url("../images/Background_light.jpg");
 
     .bg_holder {
       width: 100%;
