@@ -62,7 +62,7 @@ h1 {
         @include breakpoint(mobile) {
           background-image: url(../images/background_light_opacity.jpg);
           width: 100%;
-          padding: 8px 0;
+          padding: 2px 0;
         }
       }
 
@@ -70,6 +70,7 @@ h1 {
         @include breakpoint(mobile) {
           width: 100%;
           padding-bottom: 8px;
+          padding-top: 21px;
         }
       }
 
@@ -86,7 +87,7 @@ h1 {
         @include breakpoint(mobile) {
           float: none;
           width: 280px;
-          margin: 0 auto 10px;
+          margin: 0 auto;
         }
         a {
           color: #000;
@@ -96,6 +97,9 @@ h1 {
 
           @include breakpoint(tablet) {
             line-height: 30px;
+          }
+          @include breakpoint(mobile) {
+            font-size: 22px;
           }
           span {
             color: #53a665;
@@ -194,7 +198,6 @@ h1 {
             @include breakpoint(mobile) {
               border-bottom-color: #53a665;
             }
-
           }
           .add_li {
             @include breakpoint(mobile) {
@@ -274,7 +277,7 @@ h1 {
               @include breakpoint(mobile) {
                 color: #000;
                 font-size: 16px;
-                margin-bottom: 5px;
+                margin-bottom: 4px;
               }
             }
             :first-child {
@@ -293,6 +296,7 @@ h1 {
               @include breakpoint(mobile) {
                 font-size: 14px;
                 margin-top: 20px;
+                line-height: 21px;
               }
             }
             p > a {
