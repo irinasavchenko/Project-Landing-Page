@@ -37,174 +37,174 @@ h1 {
       background-image: none;
     }
 
-  .nav_content {
+    .nav_content {
 
-    text-transform: uppercase;
-    font-family: 'Bree Serif', serif;
-
-    @include breakpoint(desktop) {
-      width: 940px;
-    }
-
-    @include breakpoint(tablet) {
-      width: 460px;
-      text-align: center;
-      padding: 25px 0;
-    }
-
-    @include breakpoint(mobile) {
-      width: 100%;
-      text-align: left;
-      padding: 0;
-    }
-
-    .logo_wrapper {
-      @include breakpoint(mobile) {
-        background-image: url(../images/background_light_opacity.jpg);
-        width: 100%;
-        padding: 8px 0;
-      }
-    }
-
-    .nav_wrapper {
-      @include breakpoint(mobile) {
-        width: 100%;
-        padding-bottom: 8px;
-      }
-    }
-
-    .logo {
-      @include breakpoint(desktop) {
-        float: left;
-      }
-
-      @include breakpoint(tablet) {
-        float: none;
-        margin-bottom: 10px;
-      }
-
-      @include breakpoint(mobile) {
-        float: none;
-        width: 280px;
-        margin: 0 auto 10px;
-      }
-      a {
-        color: #000;
-        font-size: 30px;
-        line-height: 60px;
-        text-decoration: none;
-
-        @include breakpoint(tablet) {
-          line-height: 30px;
-        }
-        span {
-          color: #53a665;
-        }
-      }
-    }
-    nav {
       text-transform: uppercase;
       font-family: 'Bree Serif', serif;
 
-      @include breakpoint(mobile) {
-        width: 280px;
-        float: none;
-        margin: 0 auto;
-      }
-
       @include breakpoint(desktop) {
-        float: right;
+        width: 940px;
       }
 
       @include breakpoint(tablet) {
-        float: none;
+        width: 460px;
+        text-align: center;
+        padding: 25px 0;
       }
 
-      ul {
+      @include breakpoint(mobile) {
+        width: 100%;
+        text-align: left;
+        padding: 0;
+      }
+
+      .logo_wrapper {
+        @include breakpoint(mobile) {
+          background-image: url(../images/background_light_opacity.jpg);
+          width: 100%;
+          padding: 8px 0;
+        }
+      }
+
+      .nav_wrapper {
+        @include breakpoint(mobile) {
+          width: 100%;
+          padding-bottom: 8px;
+        }
+      }
+
+      .logo {
+        @include breakpoint(desktop) {
+          float: left;
+        }
+
         @include breakpoint(tablet) {
-          display: inline-block;
+          float: none;
+          margin-bottom: 10px;
         }
 
         @include breakpoint(mobile) {
-          display: block;
+          float: none;
+          width: 280px;
+          margin: 0 auto 10px;
         }
-
-        li {
-          float: left;
-          display: block;
-          height: inherit;
-          padding-left: 10px;
-          line-height: 67px;
+        a {
+          color: #000;
+          font-size: 30px;
+          line-height: 60px;
+          text-decoration: none;
 
           @include breakpoint(tablet) {
-            line-height: 16px;
+            line-height: 30px;
+          }
+          span {
+            color: #53a665;
+          }
+        }
+      }
+      nav {
+        text-transform: uppercase;
+        font-family: 'Bree Serif', serif;
+
+        @include breakpoint(mobile) {
+          width: 280px;
+          float: none;
+          margin: 0 auto;
+        }
+
+        @include breakpoint(desktop) {
+          float: right;
+        }
+
+        @include breakpoint(tablet) {
+          float: none;
+        }
+
+        ul {
+          @include breakpoint(tablet) {
+            display: inline-block;
           }
 
           @include breakpoint(mobile) {
-            float: none;
-            border-bottom: 3px solid #333;
-            padding: 9px 0;
+            display: block;
           }
 
-          a {
-            text-decoration: none;
-            color: #333;
-            font-size: 16px;
+          li {
+            float: left;
+            display: block;
+            height: inherit;
+            padding-left: 10px;
+            line-height: 67px;
 
+            @include breakpoint(tablet) {
+              line-height: 16px;
+            }
+
+            @include breakpoint(mobile) {
+              float: none;
+              border-bottom: 3px solid #333;
+              padding: 9px 0;
+            }
+
+            a {
+              text-decoration: none;
+              color: #333;
+              font-size: 16px;
+
+              span {
+                display: none;
+              }
+            }
+          }
+
+          li.active a, li a:hover {
+            color: #53a665;
+            position: relative;
             span {
+              display: block;
+              top: 25px;
+              left: 38%;
+              height: 6px;
+              width: 16px;
+              position: absolute;
+              background-image: url(../images/selected_link_triangle.jpg);
+
+              @include breakpoint(mobile) {
+                display: none;
+              }
+            }
+          }
+          li.active {
+            @include breakpoint(mobile) {
               display: none;
             }
           }
-        }
+          li:hover {
+            @include breakpoint(mobile) {
+              border-bottom-color: #53a665;
+            }
+          }
+          li.active_for_mobile a {
+            @include breakpoint(mobile) {
+              color: #53a665;
+              border-bottom-color: #53a665;
+            }
+          }
+          li.active_for_mobile {
+            @include breakpoint(mobile) {
+              border-bottom-color: #53a665;
+            }
 
-        li.active a, li a:hover {
-          color: #53a665;
-          position: relative;
-          span {
-            display: block;
-            top: 25px;
-            left: 38%;
-            height: 6px;
-            width: 16px;
-            position: absolute;
-            background-image: url(../images/selected_link_triangle.jpg);
-
+          }
+          .add_li {
             @include breakpoint(mobile) {
               display: none;
             }
           }
         }
-        li.active {
-          @include breakpoint(mobile) {
-            display: none;
-          }
-        }
-        li:hover {
-          @include breakpoint(mobile) {
-            border-bottom-color: #53a665;
-          }
-        }
-        li.active_for_mobile a {
-          @include breakpoint(mobile) {
-            color: #53a665;
-            border-bottom-color: #53a665;
-          }
-        }
-        li.active_for_mobile {
-          @include breakpoint(mobile) {
-            border-bottom-color: #53a665;
-          }
-
-        }
-        .add_li {
-          @include breakpoint(mobile) {
-            display: none;
-          }
-        }
       }
     }
   }
-}
 
   .wrapper {
     font-family: 'Bree Serif', serif;
